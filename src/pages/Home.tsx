@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import SkillsCarousel from '../componets/SkillsCarousel';
 import Experiences from './Experiences';
+import Projects from './Projects';
+import { theme } from '../styles/theme';
 
 const ContainerHome = styled.div`
   min-height: 100vh;
@@ -61,6 +63,28 @@ const Carrosel = styled.div`
   margin: 0 auto;
 `;
 
+const Contato = styled.div`
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 40px;
+`;
+
+const Link = styled.a`
+  color: ${theme.colors.primary};
+  font-size: 1.25rem;
+
+  &:hover {
+    text-decoration: none;
+    color: ${theme.colors.text};
+    transition: 0.3s ease;
+    transform: translateY(-2px);
+  }
+`;
+
 const Home: React.FC = () => {
   return (
     <ContainerHome id='Sobre'>
@@ -93,6 +117,21 @@ const Home: React.FC = () => {
       </ContainerFlexColumn>
 
       <Experiences id={'Experiencia'}/>
+
+      <Projects id={'Projetos'}/>
+
+      <Contato id='Contato'>
+        <Title>Contato</Title>
+        <Descriptions>
+          Estou aberta a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato comigo através do email ou linkedin:
+        </Descriptions>
+        <Link href=''>
+          marialuizaabrami@gmail.com
+        </Link>
+        <Link href='https://www.linkedin.com/in/maria-luiza-abrami-617bab330/' target="_blank" rel="noopener noreferrer"> 
+          Linkedin
+        </Link>
+      </Contato>
     </ContainerHome>
   );
 };
