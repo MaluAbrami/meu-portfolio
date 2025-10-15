@@ -19,12 +19,36 @@ const Descriptions = styled.p`
   color: #ffffff;
 `;
 
+const Picture = styled.img`
+  width: 150px;
+  border-radius: 50%;
+`;
+
+const HomeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+`;
+
 const Home: React.FC = () => {
   return (
     <Container>
-      <Title>Bem-vindo à Home!</Title>
-      <Descriptions>Este é o conteúdo principal da página inicial do seu portfólio.</Descriptions>
-      <Descriptions>Você pode adicionar mais seções e conteúdo conforme necessário.</Descriptions>
+      <Title>Bem-vindo ao meu Portfólio!</Title>
+      <HomeContainer>
+        <Picture src="src/assets/minhaFotoComIA.jpg" alt="Minha Foto" />
+        <Descriptions>
+        Olá! Meu nome é Maria Luiza Abrami, sou desenvolvedora backend com 20 anos de idade e apaixonada por tecnologia.
+        </Descriptions>
+        <Descriptions>
+        Tenho experiência sólida em desenvolvimento com C#, criando soluções robustas, escaláveis e seguras. Também possuo conhecimento em Java e estou sempre em busca de aprimorar minhas habilidades e aprender novas tecnologias.
+        </Descriptions>
+        <Descriptions>
+        Estou disponível para colaborar em projetos, integrar equipes de desenvolvimento ou assumir novos desafios profissionais. Se você procura alguém comprometido, proativo e com foco em resultados, entre em contato!
+        </Descriptions>
+      </HomeContainer>
     </Container>
   );
 };
