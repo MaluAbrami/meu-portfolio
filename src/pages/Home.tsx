@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SkillsCarousel from '../componets/SkillsCarousel';
+import Experiences from './Experiences';
 
 const ContainerHome = styled.div`
   min-height: 100vh;
@@ -90,6 +91,8 @@ const Home: React.FC = () => {
           <SkillsCarousel />
         </Carrosel>
       </ContainerFlexColumn>
+
+      <Experiences id={'Experiencia'}/>
     </ContainerHome>
   );
 };
